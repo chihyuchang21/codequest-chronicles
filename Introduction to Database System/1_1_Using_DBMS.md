@@ -25,7 +25,10 @@
 
 ## 5. How DBMS Answers Queries Efficiently
 - **Query Optimization**: DBMS plans the best path to execute each query.
+![img.png](pic/1-1/1-1-1.png)
+
 - **Indexing**: Creates a search tree for columns to improve lookup speed.
+![img_1.png](pic/1-1/1-1-2.png)
 
 ## 6. Transactions and ACID Properties
 - **Atomicity**: All or nothing execution.
@@ -34,8 +37,13 @@
 - **Durability**: Data remains safe after a transaction, even in case of crashes.
 
 ## 7. Data Models in DBMS
-- **Relational Model**: Tables (relations) for entities, with primary keys for unique identification.
+- **Why model data as tables?**: Using tables helps reduce redundancy and manage space complexity, addressing the conflict between the tree model often used on the client side and the relational model preferred on the server side.
 - **Entity-Relationship (ER) Model**: Allows thinking of data in an object-oriented manner, establishing relationships (1-1, 1-N, N-N).
+- **Relational Model**: Tables (relations) for entities, with primary keys for unique identification.
+![img.png](pic/1-1/1-1-3.png)
+![img_1.png](pic/1-1/1-1-4.png)
+![img_2.png](pic/1-1/1-1-5.png)
+![img_3.png](pic/1-1/1-1-6.png)
 
 ## 8. Example - Student Database Design
 - **Entities**: Tables for students, departments, courses, enrollments, sections.
