@@ -1,5 +1,3 @@
-# Database Management Systems (DBMS) - Key Concepts
-
 ## 1. DBMS vs. Database
 - **Database**: A collection of organized data stored on a computer.
 - **DBMS**: Software that manages databases, facilitating efficient data storage, retrieval, and management.
