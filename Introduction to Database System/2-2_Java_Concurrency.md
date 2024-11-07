@@ -32,7 +32,7 @@
 
 # 2. Memory Model in Multithreading
 
-![img.png](img.png)
+![img.png](pic/2-2/2-2-1.png)
 
 
 
