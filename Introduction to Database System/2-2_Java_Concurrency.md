@@ -31,6 +31,11 @@
     - The CPU handles both `main` and `run()` in parallel, executing both concurrently.
 
 # 2. Memory Model in Multithreading
+
+![img.png](img.png)
+
+
+
 - **Thread Memory Layout**:
     - **Heap**: Shared memory area where objects reside; accessible by all threads.
     - **Stack**: Each thread has its own stack for managing its local variables and method calls.
