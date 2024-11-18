@@ -44,29 +44,48 @@
     }
     ```
 
-# 4. Anomalies in Data
-- **Types of Anomalies**:
-  - **Insertion Anomaly**: Difficulty in adding data due to missing information.
-  - **Update Anomaly**: Inconsistencies when data is not updated uniformly.
-  - **Deletion Anomaly**: Loss of useful data when other data is deleted.
+# 4. Architecture of VanillaCore
+- **Interfaces**:
+  - SQL.
+  - JDBC.
+  - Native Query Interface.
+  - Storage Interface.
+- **Components**:
+  - Server infrastructure (e.g., JDBC, SQL, Tx).
+  - Query Engine.
+  - Storage Engine.
 
-# 5. Normalization Process
-- **Purpose**: Minimize duplication and inconsistency in data.
-- **Forms Explained**:
-  - **1st Normal Form**: Removes multi-valued attributes.
-  - **2nd Normal Form**: Ensures all non-key attributes depend on the entire primary key.
-  - **3rd Normal Form**: Ensures no transitive dependencies exist.
-  - **BCNF**: Strengthens 3NF by ensuring all determinants are candidate keys.
+# 5. Metadata Management
+- **Types of Metadata**
+  - Table Metadata: Includes schema, field types, and offsets.
+  - View Metadata: Properties of views (definition, creator).
+  - Index Metadata: Indexes on fields.
+  - Statistical Metadata: Data for query cost estimation.
+- **Storage of Metadata**
+  - Stored in catalog tables (`tblcat.tbl`, `fldcat.tbl`, `idxcat.tbl`, `viewcat.tbl`).
+  - Statistical metadata is kept in memory and periodically updated for fast access.
 
-# 6. Functional Dependencies and Normal Forms
-- **Functional Dependency**: Relationship where one attribute uniquely determines another.
-- **Challenges with Normalization**:
-  - Reduces redundancy and increases integrity but can make queries more complex.
+# 6. Storage Interface
+- **File Structure**
+  - Data organized into blocks (smallest OS I/O unit).
+  - Blocks loaded into memory pages for processing.
+- **RecordFile API**
+  - Provides random and sequential access to records.
+  - Example Methods:
+    ```java
+    RecordFile.moveToRecordId(recordId);
+    RecordFile.getVal(fieldName);
+    RecordFile.setVal(fieldName, value);
+    RecordFile.insert();
+    RecordFile.delete();
+    ```
 
-# 7. Query Processing and Metadata
-- **Planner and Transaction**:
-  - The planner determines efficient query execution plans.
-  - Transactions ensure correctness and consistency.
-- **Metadata**:
-  - Describes database schema, views, indexes, and statistics for optimization.
-  - Stored in catalog tables for querying like normal data.
+# 7. Assigned Readings
+- **References**
+  - System R: "Relational Approach to Database Management," ACM Transactions on Database Systems, 1976.
+  - "Architecture of a Database System," Foundations and Trends in Databases, 2007.
+  - Edward Sciore, "Database Design and Implementation," 2008.
+
+# 8. Assignment
+- Implement a JDBC client using stored procedures.
+- Compare performance using provided data population and benchmarking tools.
