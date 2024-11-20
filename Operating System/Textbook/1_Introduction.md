@@ -3,10 +3,18 @@
 - **Purpose**: Facilitates program execution in a convenient and efficient manner, while ensuring system reliability and security.
 
 # 2. Components of a Computer System
-- **Hardware**: CPU, memory, and I/O devices, providing basic computing resources.![alt text](pic/1-1-1.png)
+- **Hardware**: CPU, memory, and I/O devices, providing basic computing resources.
+  <br>
+  <img src="pic/1-1-1.png" alt="Hardware" width="500">
+
 - **Operating System**: Manages hardware and coordinates its use among application programs and users.
 - **Application Programs**: Software like web browsers and word processors, solving specific user problems.
 - **User**: Interacts with the system via interfaces like GUIs or command lines.
+  <br>
+  <img src="pic/1-1-2.png" alt="alt text" width="500">
+  <br>
+  <img src="pic/1-1-3.png" alt="alt text" width="500">
+
 
 # 3. Key Functions of Operating Systems
 - **Resource Management**: Allocates CPU, memory, and I/O resources efficiently.
@@ -29,12 +37,6 @@
 - **Mobile OS**: Android, iOS.
 - **Embedded Systems**: Real-time operating systems in devices like cars and appliances.
 - **Cloud Environments**: OS managing virtual machines and distributed resources.
-
-# 7. Free and Open-Source Operating Systems
-- **Linux**: Widely used in servers and personal computers.
-- **BSD UNIX**: Known for its robust networking capabilities.
-- **Advantage**: Enables learning, customization, and community-driven improvements.
-
 
 
 
