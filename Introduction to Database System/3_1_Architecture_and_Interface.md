@@ -89,3 +89,5 @@
 # 8. Assignment
 - Implement a JDBC client using stored procedures.
 - Compare performance using provided data population and benchmarking tools.
+
+![alt text](pic/3-1/3-1-4.png)
