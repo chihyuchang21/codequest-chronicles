@@ -35,5 +35,4 @@
 - **Summary**: This chapter introduces the concept of processes, scheduling, operations, and various ways and models of interprocess communication.
 
 - **Understading Process and Thread**:　https://medium.com/erens-tech-book/%E7%90%86%E8%A7%A3-process-thread-94a40721b492
-
-![alt text](3-2-1.png)
+![alt text](pic/3-2-1.png)
