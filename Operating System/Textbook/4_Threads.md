@@ -10,9 +10,30 @@
 
 ## **4.3 Multithreading Models**
 - **Models Covered**: Reviews different models of system-level and user-level multithreading.
+    - *Many-to-One Model*
+        - Many user threads correspond to a single kernel thread.
+        - Think of user threads as units competing for the CPU.
+        - There's only one CPU, so parallel processing is not possible (since there's just one!).
+        - Actually… it won’t be faster.
+    
+        <img src="pic/4-3-1.png" alt="view" width="300">    
+    
+    - *One-to-One Model*
+        - One user thread corresponds to one kernel thread.
+        - When one thread is blocked (e.g., making a blocking system call), others will continue processing.
+        - Higher management cost: Creating a user thread necessitates the creation of a corresponding kernel thread.
+
+        <img src="pic/4-3-2.png" alt="view" width="300">    
+
+    - *Many-to-Many Model*
+        - Automatically establishes a mapping between user threads and kernel threads.
+        - Lower management cost.
+
+        <img src="pic/4-3-3.png" alt="view" width="300">    
+
 
 ## **4.4 Thread Libraries**
-- **Purpose**: Details the APIs and libraries available for thread management and synchronization.
+- **Purpose**: Provides the programmer with an API for creating and managing threads.
 - **Examples**: POSIX threads, Java threading mechanisms.
 
 ## **4.5 Implicit Threading**
@@ -26,6 +47,3 @@
 ## **4.7 Operating-System Examples**
 - **Case Studies**: Demonstrates how modern operating systems implement threading and handle concurrency.
 - **Systems Discussed**: Examples from Linux, Windows, and macOS.
-
-## **4.8 Summary**
-- **Key Takeaways**: Summarizes the critical points about threads and concurrency discussed in the chapter.
