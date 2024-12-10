@@ -3,15 +3,19 @@
 - **CPU Scheduling**: Focuses on managing multiple processes where more than one process is ready to execute. The CPU scheduler selects from among the processes that are ready to execute and allocates the CPU to one of them.
 - **Importance**: Efficient CPU scheduling is central to good system performance.
 
-## 5.2 Scheduling Criteria
-- **CPU Utilization**: Keeping the CPU as busy as possible is a primary goal.
-- **Throughput**: Number of processes completed per time unit; higher is better.
-- **Turnaround Time**: Time taken for a process to complete after submission. Reducing turnaround time is crucial for batch systems.
-- **Waiting Time**: Total time a process has been in the ready queue; minimizing waiting time is crucial for interactive performance.
-- **Response Time**: Time from request submission until the first response is produced. Important in environments where quick reactions are needed from the system.
+<img src="pic/5-1-1.png" alt="view" width="250" height="400">
+
+
+## 5.2 Scheduling Criteria (排班原則)
+- **CPU Utilization (Max)**: Keeping the CPU as busy as possible is a primary goal.
+- **Throughput (Max)**: Number of processes completed per time unit; higher is better.
+- **Turnaround Time (min)**: Time taken for a process to complete after submission. Reducing turnaround time is crucial for batch systems.
+- **Waiting Time (min)**: Total time a process has been in the ready queue; minimizing waiting time is crucial for interactive performance.
+- **Response Time (min)**: Time from request submission until the first response is produced. Important in environments where quick reactions are needed from the system.
 
 ## 5.3 Scheduling Algorithms
 - **First-Come, First-Served (FCFS)**: Simplest scheduling algorithm that operates on a first-in, first-out basis.
+    - Convoy Effect (護送現象): All processes are waiting for a major process to release the CPU, resulting in reduced CPU and device utilization.
 - **Shortest-Job-First (SJF)**: Associates each process with the length of its next CPU burst and schedules the process with the shortest time.
 - **Priority Scheduling**: Processes are assigned a priority, and the CPU is allocated to the process with the highest priority.
 - **Round Robin (RR)**: Each process gets a small unit of CPU time (time quantum), usually 10-100 milliseconds. After this time has elapsed, the process is preempted and added to the end of the ready queue.
